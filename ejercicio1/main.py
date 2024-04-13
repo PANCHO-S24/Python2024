@@ -1,23 +1,28 @@
-from clase import CajaAhorro
-from clase import test
+from clase import Cuenta
+
+def ingresarDatosCuenta():
+    cuentas = []
+    for i in range(2):
+        print("Ingrese los datos para la cuenta", i + 1)
+        nombre = input("Nombre: ")
+        apellido = input("Apellido: ")
+        cuil = input("CUIL: ")
+        num_cuenta = input("Número de cuenta: ")
+        saldo = float(input("Saldo: "))  # Convertimos a float
+        print("---------------------------------------")
+        cuenta = Cuenta(nombre, apellido, cuil, num_cuenta, saldo)
+        cuentas.append(cuenta)
+    return cuentas
+
+def test(cuentas):
+    for cuenta in cuentas:
+        print("\nInformación de la cuenta de", cuenta.nombre, cuenta.apellido)
+        print("CUIL:", cuenta.cuil)
+        print("Número de cuenta:", cuenta.numero_cuenta)
+        print("Saldo actual:", cuenta.saldo)
+        cuenta.depositar(float(input("Ingrese el monto a depositar: ")))
+        cuenta.Extraer(float(input("Ingrese el monto a extraer: ")))
 
 if __name__ == "__main__":
-  lista_cuenta = test()
-  print(f"[1],consultar saldo: ")
-  print(f"[2],Extraer: ")
-  print(f"[3],Depositar: ")
-  print(f"[5],test: ")
-  
-  
-  opcion=int(input("ingrese operacion"))
-  while opcion !=0:
-    if opcion == 1:
-       for elemento in lista_cuenta:
-           print(elemento.Mostrardatos())
-    if opcion == 2:
-       CajaAhorro.Extraer()
-    if opcion == 3:
-       CajaAhorro.depositar()
-    if opcion == 5:
-       CajaAhorro.test()
-       
+    cuentas = ingresarDatosCuenta()
+    test(cuentas)
