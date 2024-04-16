@@ -41,6 +41,10 @@ def test(cuentas):
                 cuenta.Extraer(monto)
                 print("Saldo actual de la cuenta {}: {}".format(cuenta.num_cuenta, cuenta.saldo))
         elif opcion == "4":
+            for cuenta in cuentas:
+                cuilb = input("Ingrese el CUIL de la caja de ahorro que desea buscar: ")
+                cuenta.ValidarCuil(cuilb)
+        elif opcion == "5":
             break
         else:
             print("Opción inválida. Por favor, ingrese una opción válida.")
