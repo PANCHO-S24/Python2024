@@ -35,8 +35,11 @@ class Cuenta:
         else:
             print("El importe debe ser positivo: ")
     
-    def ValidarCuil(self):
-        pass
+    def ValidarCuil(self,cuilb):
+            if cuilb == self.cuil:
+               self.Mostrardatos()
+            else:
+                print("El cuil ingresado no pertenece a una caja de ahorro")
     
  
         
