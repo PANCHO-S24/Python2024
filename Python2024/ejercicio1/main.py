@@ -18,7 +18,8 @@ def menu_opciones():
     print("1. Mostrar datos de cuenta")
     print("2. Depositar dinero")
     print("3. Extraer dinero")
-    print("4. Salir")
+    print("4. validar cuil")
+    print("5. Salir")
     print("---------------------------------------")
     opcion = input("Ingrese la opción deseada: ")
     
