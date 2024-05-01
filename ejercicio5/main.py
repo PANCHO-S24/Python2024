@@ -11,13 +11,19 @@ def main():
         print("\n--- MENÚ DE OPCIONES ---")
         print("1. Mostrar datos de Equipos")
         print("2. Mostrar datos de Fechas")
+        print("3. Mostrar datos de un Equipo")
+        print("4. Salir")
         opcion = input("Ingrese el número de la opción que desea realizar: ")
 
         if opcion == "1":
            gestor_equipo.mostrar_datos()
         elif opcion == "2":
            gestor_fecha.mostrar_datos()
-        elif opcion == "3":
+        elif opcion =="3":
+           gestor_fecha.mostrar_equipo()
+        elif opcion =="4":
+           gestor_fecha.ActualizarTabla() 
+        elif opcion == "5":
             break
         else:
             print("Opción inválida")

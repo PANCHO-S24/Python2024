@@ -27,6 +27,7 @@ están almacenados en un archivo .csv, denominado “fechasFutbol.csv”.
 5. Crear un menú de opciones que permita:
 a. Leer los datos de los equipos del archivo y almacenarlos en el Gestor de Equipos.
 b. Leer los datos de las Fechas de Fútbol, y almacenarlos en el Gestor de Fechas.
+
 c. Leer el nombre de un equipo y obtener un listado con el siguiente formato
 Equipo: xxxxxxxxxxxxxxxx
 Fecha Goles a Favor Goles en Contra Diferencia de Goles Puntos
@@ -35,11 +36,13 @@ xx/xx/xxxx xx xx xx xx
 -------------------------------------------------------------------------------------------------------
 Totales: xx xx xx xx
 d. Actualizar la tabla de todos los equipos, con los resultados de las fechas disputadas.
+
 e. Ordenar la tabla de posiciones de mayor a menor, para ello deberá sobrecargar el
 operador mayor que (__gt__), bajo el siguiente criterio:
 a. Si los puntos de dos equipos son iguales, se debe verificar la diferencia de goles,
 si la diferencia de goles entre ambos equipos es igual, se debe verificar la
 cantidad de goles a favor.
+
 f. Almacenar la tabla de posiciones ordenada en el punto anterior en un archivo .csv.
 Reglas de negocio:
 El empate, otorga un punto a cada equipo, la victoria otorga tres puntos al equipo ganador y 0

@@ -8,9 +8,10 @@ class GestorEquipo:
     def agregaequipo(self, unequipo):
         self.__Equipo.append(unequipo)
 
-    def cargar_equipo(self, archivo):
+    def cargar_equipo(self,archivo):
         archivo = open('equipos2024.csv')
         reader = csv.reader(archivo, delimiter=",")
+        next(reader)
         for fila in reader:
             id_equipo = fila[0]
             nombre = fila[1]
@@ -23,9 +24,21 @@ class GestorEquipo:
 
     def get_equipo(self):
         return self.__Equipo
-        
-    def mostrar_datos(self):
-        print("------Datos de los Equipos:------")
-        for equipo in self.__Equipo:
-            print(f"ID: {equipo.get_id_equipo()}, Nombre: {equipo.get_nombre()}, Goles a favor: {equipo.get_gol_afavor()}, Goles en contra: {equipo.get_gol_encontra()}, Diferencia de goles: {equipo.get_diferenciaGol()}, Puntos: {equipo.get_punto()}")
     
+    def mostrar_datos(self):
+        print("-----------------------------")
+        for equipo in self.__Equipo:
+            print("ID equipo:", equipo.get_id_equipo())
+            print("Nombre:", equipo.get_nombre())
+            print("Gol a Favor:", equipo.get_gol_afavor())
+            print("Gol en contra:", equipo.get_gol_encontra())
+            print("Diferencia gol:", equipo.get_diferenciaGol())
+            print("Puntos:", equipo.get_punto())
+            print("-----------------------------")
+
+    def Busca_equipo(self,nombre):
+        i=0
+        while i < len(self.__Equipo):
+            if self.__Equipo[i].get_nombre() == nombre:
+                return self.__Equipo[i]
+            i+=1

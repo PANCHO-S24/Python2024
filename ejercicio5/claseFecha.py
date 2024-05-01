@@ -14,7 +14,7 @@ class Fecha:
     
     def get_fecha(self):
         return self.__fecha
-    def get__id_equipo_local(self):
+    def get_id_equipo_local(self):
         return self.__id_equipo_local
     def get_id_equipo_visitante(self):
         return self.__id_equipo_visitante
@@ -22,6 +22,4 @@ class Fecha:
         return self.__cant_gol_local
     def get_cant_gol_visitante(self):
         return self.__cant_gol_visitante
- 
- 
- 
+   
