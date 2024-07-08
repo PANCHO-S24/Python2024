@@ -1,0 +1,27 @@
+{% extends "template_base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>{{ mensaje }}</h1>
+    <a href="/" class="button">Volver al inicio</a>
+</div>
+<section class="operaciones">
+    <div class="texto-operaciones">
+        <h2>Seleccione operación a realizar:</h2>
+    </div>
+    <div class="registros">
+        <div class="operacion">
+            <a href="{{ url_for('registrar_paquete') }}" class="btn-registro">Registrar Paquete</a>
+        </div>
+        <div class="operacion">
+            <a href="{{ url_for('registrar_llegada') }}" class="btn-registro">Registrar Llegada</a>
+        </div>
+        <div class="operacion">
+            <a href="{{ url_for('registrar_salida') }}" class="btn-registro">Registrar Salida</a>
+        </div>
+    </div>
+</section>
+</section>
+{% endblock %}
+
+

@@ -1,0 +1,53 @@
+{% extends "template_base.html" %}
+{% block content %}
+
+<section class="bienvenida">
+    <div class="texto-bienvenida">
+        <h1>Bienvenido Despachante!</h1>
+    </div>
+</section>
+
+<section class="tabla-sucursales">
+    <div class="texto-sucursal">
+      <h2>Sucursales</h2>
+    </div>
+    <div class="tabla">
+        <table>
+            <thead>
+                <tr>
+                    <th>Numero</th>
+                    <th>Provincia</th>
+                    <th>Localidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for sucursal in sucursales %}
+                <tr>
+                    <td>{{ sucursal.id }}</td>
+                    <td>{{ sucursal.provincia }}</td>
+                    <td>{{ sucursal.localidad }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="operaciones">
+    <div class="texto-operaciones">
+        <h2>Seleccione operación a realizar:</h2>
+    </div>
+    <div class="registros">
+        <div class="operacion">
+            <a href="{{ url_for('registrar_paquete') }}" class="btn-registro">Registrar Paquete</a>
+        </div>
+        <div class="operacion">
+            <a href="{{ url_for('registrar_llegada') }}" class="btn-registro">Registrar Llegada</a>
+        </div>
+        <div class="operacion">
+            <a href="{{ url_for('registrar_salida') }}" class="btn-registro">Registrar Salida</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %}{%endblock %} </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="sidenav">
+        <ul class="nav-links">
+            <li class="link logo-link">
+                <a href="#">
+                    <img src="{{ url_for('static', filename='img/logo-pequeño2.jpeg') }}" alt="Logipack Logo" class="nav-logo">
+                </a>
+            </li>
+            <li class="link"><a href="{{ url_for('login') }}">Inicio</a></li>
+            <li class="link"><a href="{{ url_for('lista_sucursales') }}">Despachante</a></li>
+            <li class="link"><a href="#">Repartidor</a></li>
+        </ul>
+    </div>
+    {% block content %}
+    <div class="main">
+        <h1 class="title">Logipack</h1>
+    </div>
+    <div class="imagen-container">
+        <img src="{{ url_for('static', filename='img/fotomain2.jpg') }}" alt="Logipack Logo" class="logo">
+        <div class="lorem-text">
+            <p>Logipack es una empresa líder en soluciones logísticas, ofreciendo servicios de transporte eficiente y seguro para todo tipo de productos. Con años de experiencia en el mercado, nos destacamos por nuestra puntualidad y atención al cliente.</p>
+        </div>
+    </div>
+        {% block main_content %}{%endblock %}
+    </div>
+    {% endblock %}
+</body>
+</html>
