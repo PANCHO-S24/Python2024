@@ -1,0 +1,44 @@
+[
+    {
+        "player": "pancho",
+        "score": 6,
+        "date": "2024-06-24 10:04:40",
+        "hora": "2024-06-24 10:04:40",
+        "level": "Principiante"
+    },
+    {
+        "player": "sofia",
+        "score": 5,
+        "date": "2024-06-24 15:41:50",
+        "hora": "2024-06-24 15:41:50",
+        "level": "Principiante"
+    },
+    {
+        "player": "juan",
+        "score": 5,
+        "date": "2024-06-24 15:55:41",
+        "hora": "2024-06-24 15:55:41",
+        "level": "Principiante"
+    },
+    {
+        "player": "fran",
+        "score": 5,
+        "date": "2024-06-24 19:24:28",
+        "hora": "2024-06-24 19:24:28",
+        "level": "Principiante"
+    },
+    {
+        "player": "matias",
+        "score": 4,
+        "date": "2024-06-24 15:28:25",
+        "hora": "2024-06-24 15:28:25",
+        "level": "Principiante"
+    },
+    {
+        "player": "fran",
+        "score": 3,
+        "date": "2024-06-24 19:23:44",
+        "hora": "2024-06-24 19:23:44",
+        "level": "Principiante"
+    }
+]
